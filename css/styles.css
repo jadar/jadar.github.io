@@ -1,33 +1,36 @@
 body, html {
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
-	background: rgb(46, 46, 46);
+	background: #333;
 }
 
-/*.navbar-default {
-	padding-top: 15px;
-    background-color: transparent;
-    border-bottom: 1px solid transparent;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #fff;
 }
 
-.navbar-default .navbar-brand {
-	color: #ffffff;
-	opacity: 1;
-}*/
-
+#bootstrap-menu .navbar {
+	-webkit-transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86), padding .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -moz-transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86), padding .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86), padding .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
 
 #bootstrap-menu.navbar-default .navbar-brand {
-    color: transparent;
+    color: #fff;
+    font-family: 'Biryani', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
 }
 #bootstrap-menu.navbar-default {
     font-size: 18px;
     border-width: 0px;
     border-radius: 0px;
-    padding-top: 15px;
     background-color: transparent;
     border-bottom: 1px solid transparent;
-
-    font-family: Roboto-Bold;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
     color: #F3F3F3;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -37,31 +40,72 @@ body, html {
 }
 #bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(209, 209, 209, 1);
-    background-color: rgba(248, 248, 248, 0);
+    /*color: rgba(209, 209, 209, 1);*/
+    background-color: transparent;/*rgba(248, 248, 248, 0);*/
 }
 #bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(231, 231, 231, 1);
+    /*color: rgba(255, 255, 255, 1);*/
+    background-color: transparent;/*rgba(231, 231, 231, 1);*/
 }
+
 #bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #ddd;
+    border-color: transparent; 
 }
+
 #bootstrap-menu.navbar-default .navbar-toggle:hover,
 #bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #ddd;
+    border-color: transparent;
+    background-color: transparent;
 }
 #bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #888;
+    background-color: #fff;
 }
 #bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #888;
+    background-color: #ddd;
+}
+
+#bootstrap-menu.navbar-default .navbar-collapse .collapse .in {
+    /*background-color: #ddd;*/
+    opacity: 0.0;
+}
+
+#bootstrap-menu.navbar-default .navbar-collapse .collapse {
+    background-color: #ddd;
+    opacity: 0.7;
+}
+
+#bootstrap-menu .navbar-header {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+#bootstrap-menu .navbar-collapse {
+	background: rgba(0, 0, 0, 0.6);
+	text-align: right;
 }
 
 @media(min-width:767px) {
+	#bootstrap-menu.navbar-default .navbar-brand {
+        -webkit-transition: opacity .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out,padding .5s ease-in-out;
+        transition: opacity .25s cubic-bezier(0.785, 0.135, 0.15, 0.86), padding .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    #bootstrap-menu.navbar-default {
+    	padding-top: 15px;
+    }
+
+    #bootstrap-menu .navbar-header {
+		background: transparent;
+	}
+
+	#bootstrap-menu .navbar-collapse {
+		background: transparent;
+		text-align: inherit;
+	}
+
     .navbar {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -72,6 +116,12 @@ body, html {
     .top-nav-collapse {
         padding: 0;
     }
+}
+
+/* End navbar */
+
+section .container-fluid {
+	padding: 0;
 }
 
 .hero {
@@ -89,6 +139,19 @@ body, html {
 	width: 105%; 
 	/*height: 100%;*/
 	/* right: 100%; */
+}
+
+@media (max-width: 768px) {
+	.hero > img {
+		/*background: url() no-repeat fixed top;*/
+		/*background-size: cover;*/
+		height: 100%;
+		width: unset;
+		right: 120%;
+		display: block;
+		/*height: 100%;*/
+		/* right: 100%; */
+	}
 }
 
 .hero .container {
@@ -134,4 +197,29 @@ a.scroll-arrow {
 	font-family: 'Biryani', sans-serif;
 	font-size: 16px;
 	letter-spacing: 0.5px;
+}
+
+#portfolio {
+	text-align: center;
+}
+
+#portfolio .phone {
+	/* left: 50%; */
+	position: absolute;
+	/* top: 0%; */
+	/* transform: translateX(-50%); */
+	max-width: 336px;
+	height: auto;
+	padding: 0 10 0 10;
+}
+
+#portfolio .phone > img {
+	width: 100%;
+}
+
+#portfolio h1 {
+	margin: 50px;
+	font-weight: 200;
+	font-size: 62px;
+	font-family: 'Biryani', sans-serif;
 }
