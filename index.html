@@ -9,9 +9,11 @@
 
 
 	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Biryani:200,300,400|Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Biryani:200,300,400|Roboto:200,300,400" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 
 	<body id="top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -30,7 +32,7 @@
                 </div>
                 <div class="collapse navbar-collapse jacob-nav-collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#portfolio-1">PORTFOLIO</a></li>
+						<li><a href="#portfolio">PORTFOLIO</a></li>
 						<li><a href="#contact">CONTACT ME</a></li>
 					</ul>
 				</div>
@@ -46,7 +48,7 @@
         <section id="main" class="main-section">
 			<div class="container-fluid">
 				<div class="hero parallax">
-					<img src="/images/jacob.jpg">
+					<img class="rellax" src="/images/jacob.jpg">
 					<div class="container">
 						<div class="name-container">
 							<div class="name">
@@ -66,17 +68,110 @@
 
 		<!-- End main page -->
 
-		<section id="portfolio" class="portfolio-section" style="height: 100%;">
-			<h1>Portfolio</h1>
-			
+		<a id="portfolio"></a>
+
+		<!-- Start RPI section -->
+
+		<section id="portfolio-rpi" class="section">
+			<center><h1>Portfolio</h1></center>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<figure class="rpi-screenshot rellax" data-rellax-speed="1"></figure>
+					</div>
+					<div class="col-md-1">
+						<figure class="app-icon"></figure>
+					</div>
+					<div class="col-md-6">
+						<h3>RP International</h3>
+						<br/>
+						RP International allows attendees to make the most of the conference. Find the classes, seminars, and events, that you're interested in! Get a heads up view of what is coming next and plan out your day in detail. Make the most of your time by easily filtering through the events and seeing what matters to you.
+						<br/>&nbsp;
+						<ul>
+							<li>See what events are happening on an hour-by-hour basis.</li>
+							<li>Favorite events so you know exactly what you want to do.</li>
+							<li>Easily find where events are located.</li>
+							<li>Filter events by category. (Nursery, Preschool, Kindergarten, Juniors, Middle School, High School, College, Phase 2, Adult, and more!)</li>
+							<li>Search events by their name, location, speaker, and description.</li>
+							<li>Receive reminders 15-minutes before a favorite event begins.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- End RPI section -->
+
+		<!-- Start CYPU section -->
+
+		<section id="portfolio-cypu" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>CYPU</h3>
+						<br/>
+						I crafted the site for Covenanter Young Peoples Union, an organization of the Great Lakes/Gulf Presbytery of the Reformed Presbyterian church. The site informs of the year's youth events and allows people to register for them online.
+					</div>
+					<div class="col-md-1">
+						<figure class="app-icon"></figure>
+					</div>
+					<div class="col-md-4">
+						<figure class="cypu-screenshot rellax" data-rellax-speed="1"></figure>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- End CYPU section -->
+
+		<section id="contact" class="section">
+			<div class="container">
+				<center>
+				<h1>Contact Me</h1>
+				<div><figure class="portrait"></figure></div>
+				<div class="contact-icons">
+					<a href="https://github.com/jadar/" class="fa fa-github"></a>
+					<a href="https://twitter.com/jadardev" class="fa fa-twitter"></a>
+					<a href="https://www.linkedin.com/in/jacob-r-44a599122/" class="fa fa-linkedin"></a>
+				</div>
+				<h3>Have a question? Drop me a line!</h3>
+				<div class="contact-form">
+					<form>
+						<div class="col-md-6">
+							<input type="text" id="name" placeholder="Name">
+							<input type="text" id="email" placeholder="Email">
+						</div>
+						<div class="col-md-6">
+							<input type="text" id="phone" placeholder="Phone">
+							<input type="text" id="website" placeholder="Website">
+						</div>
+						<br/>
+
+						<div class="col-md-12">
+						<textarea type="text" id="message" placeholder="Your Message"></textarea>
+						<br/>
+						<div class="g-recaptcha" data-sitekey="6LdvTiEUAAAAAPnOvtqGqiTMMqVxBX9-E2rzirnW"></div> <!-- captcha -->
+						<a href="javascript:void(0);" id="contactSubmit" class="btn btn-primary">Send</a> <!-- submit -->
+						</div>
+						<div class="g-recaptcha" data-sitekey="6LdvTiEUAAAAAPnOvtqGqiTMMqVxBX9-E2rzirnW"></div>
+					</form>
+				</div>
+				</center>
+			</div>
 		</section>
 
 		<!-- Scripts -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/rellax.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 
-		<script src="js/main.js"></script>
+		<script>
+			// Need DEBUG for old version of Rellax.js
+			var DEBUG = false;
+			var rellax = new Rellax('.rellax');
+	    </script>
 
 		<!-- End Scripts -->
 

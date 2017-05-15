@@ -1,14 +1,15 @@
-body, html {
-	width: 100%;
-	font-family: 'Roboto', sans-serif;
-	background: #333;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, body {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
     color: #fff;
+}
+
+body, html {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	background: #333;
+	font-size: 15px;
 }
 
 #bootstrap-menu .navbar {
@@ -124,11 +125,14 @@ section .container-fluid {
 	padding: 0;
 }
 
+section {
+	overflow: hidden;
+}
+
 .hero {
 	color: #fff;
 	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 	height: 100%;
-	overflow: hidden;
 }
 
 .hero > img {
@@ -136,7 +140,7 @@ section .container-fluid {
 	/*background-size: cover;*/
 	vertical-align: top;
 	position: relative;
-	width: 105%; 
+	width: 105%;
 	/*height: 100%;*/
 	/* right: 100%; */
 }
@@ -199,27 +203,131 @@ a.scroll-arrow {
 	letter-spacing: 0.5px;
 }
 
-#portfolio {
-	text-align: center;
+.portfolio-section {
+	padding: 1em;
 }
 
-#portfolio .phone {
-	/* left: 50%; */
-	position: absolute;
-	/* top: 0%; */
-	/* transform: translateX(-50%); */
-	max-width: 336px;
-	height: auto;
-	padding: 0 10 0 10;
+#portfolio-rpi {
+	background: #2E2E2E
+	background: -webkit-linear-gradient(#002850, #003a73);
+	background: -o-linear-gradient(#002850, #003a73);
+	background: -moz-linear-gradient(#002850, #003a73);
+	background: linear-gradient(#002850, #003a73);
 }
 
-#portfolio .phone > img {
-	width: 100%;
-}
-
-#portfolio h1 {
-	margin: 50px;
+.section h1 {
+	margin: 50px 50px 10px 50px;
 	font-weight: 200;
 	font-size: 62px;
 	font-family: 'Biryani', sans-serif;
+}
+
+#portfolio-rpi .rpi-screenshot {
+	background: url("/images/rpi_screenshot.png") no-repeat center;
+	width: 308px;
+	height: 621px;
+	/*transform: translate3d(0px, , 0px);*/
+	display: block;
+	left: 50%;
+	margin: auto;
+}
+
+#portfolio-rpi .app-icon {
+	background: url("/images/rpi_icon.png") no-repeat center;
+	width: 52px;
+	height: 52px;
+	left: 0;
+	margin: auto;
+}
+
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+		only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+		#portfolio-rpi .rpi-screenshot {
+			 background-image: url("/images/rpi_screenshot@2x.png"); 
+			 background-size: 100%; 
+		}
+
+		#portfolio-rpi .app-icon {
+			background: url("/images/rpi_icon@2x.png") no-repeat center;
+			background-size: 100%;
+		}
+}
+
+#portfolio-cypu {
+	background: #2b3d51;
+	background: -webkit-linear-gradient(#2b3d51, #1a1a1a);
+	background: -o-linear-gradient(#2b3d51, #1a1a1a);
+	background: -moz-linear-gradient(#2b3d51, #1a1a1a);
+	background: linear-gradient(#2b3d51, #1a1a1a);
+}
+
+#portfolio-cypu .cypu-screenshot {
+	background: url("/images/cypu_screenshot.png") no-repeat center;
+	width: 1058px;
+	height: 525px;
+	left: 0;
+	margin-top: 200px;
+}
+
+#portfolio-cypu .app-icon {
+	background: url("/images/cypu_icon.png") no-repeat center;
+	width: 52px;
+	height: 52px;
+	left: 0;
+	margin: auto;
+	/*top: 50%;*/
+}
+
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+		only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+		#portfolio-cypu .cypu-screenshot {
+		}
+
+		#portfolio-cypu .app-icon {
+			background: url("/images/cypu_icon@2x.png") no-repeat center;
+			background-size: 100%;
+		}
+}
+
+.contact-icons {
+	font-size: 42px;
+	color: #ffffff;
+}
+
+.contact-icons > a {
+	padding: 1em 1em 0.5em 1em;
+	color: #fff;	
+}
+
+#contact .contact-form {
+	margin: 25px;
+}
+
+#contact .portrait {
+	background: url("/images/Portrait.png") no-repeat center;
+	width: 100px;
+	height: 100px;
+}
+
+#contact h3 {
+	margin-top: 0;
+	font-weight: 200;
+}
+
+#contact input[type=text], textarea {
+    margin: 0 25px 25px 0;
+	padding: 11px 24px;
+	width: 100%;
+}
+
+#contact textarea {
+	height: 180px;
+}
+
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+		only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+		#contact .portrait {
+			background: url("/images/Portrait@2x.png") no-repeat center;
+			background-size: 100%;
+		}
 }
