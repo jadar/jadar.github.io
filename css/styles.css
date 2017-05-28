@@ -129,6 +129,11 @@ section {
 	overflow: hidden;
 }
 
+section > .container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .hero {
 	color: #fff;
 	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -207,8 +212,17 @@ a.scroll-arrow {
 	padding: 1em;
 }
 
+.lets-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+	/* height: 100%; */
+	position: inherit;
+}
+
 #portfolio-rpi {
-	background: #2E2E2E
+	background: #002850
 	background: -webkit-linear-gradient(#002850, #003a73);
 	background: -o-linear-gradient(#002850, #003a73);
 	background: -moz-linear-gradient(#002850, #003a73);
@@ -237,7 +251,7 @@ a.scroll-arrow {
 	width: 52px;
 	height: 52px;
 	left: 0;
-	margin: auto;
+	margin-top: 20px;
 }
 
 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5), 
@@ -255,32 +269,33 @@ a.scroll-arrow {
 
 #portfolio-cypu {
 	background: #2b3d51;
-	background: -webkit-linear-gradient(#2b3d51, #1a1a1a);
-	background: -o-linear-gradient(#2b3d51, #1a1a1a);
-	background: -moz-linear-gradient(#2b3d51, #1a1a1a);
-	background: linear-gradient(#2b3d51, #1a1a1a);
+	background: -webkit-linear-gradient(#2b3d51, #19242f);
+	background: -o-linear-gradient(#2b3d51, #19242f);
+	background: -moz-linear-gradient(#2b3d51, #19242f);
+	background: linear-gradient(#2b3d51, #19242f);
 }
 
 #portfolio-cypu .cypu-screenshot {
 	background: url("/images/cypu_screenshot.png") no-repeat center;
-	width: 1058px;
+	width: 788px;
 	height: 525px;
 	left: 0;
 	margin-top: 200px;
+	padding: 0;
 }
 
 #portfolio-cypu .app-icon {
+	width: 56px;
+	height: 56px;
 	background: url("/images/cypu_icon.png") no-repeat center;
-	width: 52px;
-	height: 52px;
-	left: 0;
-	margin: auto;
-	/*top: 50%;*/
+	margin-top: 20px;
 }
 
 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5), 
 		only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
 		#portfolio-cypu .cypu-screenshot {
+			background: url("/images/cypu_screenshot@2x.png") no-repeat center;
+			background-size: 100%;
 		}
 
 		#portfolio-cypu .app-icon {
@@ -318,6 +333,7 @@ a.scroll-arrow {
     margin: 0 25px 25px 0;
 	padding: 11px 24px;
 	width: 100%;
+	color: black;
 }
 
 #contact textarea {

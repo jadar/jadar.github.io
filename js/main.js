@@ -9,18 +9,6 @@ function updateCoverImage(window, image) {
 }
 
 $(document).ready(function () {
-	// $(".parallax").each(function(){
- //        let elem = $(this); // assigning the object
- //        $(window).scroll(function() {
- //            let parent_top = elem.offset().top;          
-	// 		let window_bottom = $(window).scrollTop();
-	// 		let image = elem.find("img");
-			          	  
-	// 		let oVal = ((window_bottom - parent_top) / 3);
-	// 		image.css("transform", "translate3d(0px, " + oVal + "px, 0px)");
- //        }); 
- //    });
-
     $(".hero").each(function() {
     	let image = $(this).find("img");
     	updateCoverImage($(window), image);
@@ -36,4 +24,49 @@ $(document).ready(function () {
             $(".navbar-brand").css("opacity", "0");
         }
     });
+});
+
+$("#contactSubmit").click(function() {
+    $("#contact-alert").addClass("hidden");
+    if(!$("#name").val() || !$("#email").val() || !$("#message").val()) {
+        $("#contact-alert")
+            .removeClass("hidden")
+            .removeClass("alert-success")
+            .addClass("alert-danger")
+            .text("Please fill in the name, email, and message fields before sending.");
+    } else if (!$("#g-recaptcha-response").val()) {
+        $("#contact-alert")
+            .removeClass("hidden")
+            .removeClass("alert-success")
+            .addClass("alert-danger")
+            .text("Please click on the captcha verification.");
+    } else {
+    	let data = JSON.stringify({
+                "name": $("#name").val(),
+                "email": $("#email").val(),
+                "phone": $("#phone").val(),
+                "company": $("#website").val(),
+                "message": $("#message").val(),
+                "g-recaptcha-response": $("#g-recaptcha-response").val()
+            });
+        $.ajax({
+            type: "POST",
+            url: "http://contact.jadar.net/send_message/",
+            dataType: "json",
+            contentType: "application/json",
+            data: data
+        }).done(function () {
+			$("#contact-alert")
+                .removeClass("hidden")
+                .removeClass("alert-danger")
+                .addClass("alert-success")
+                .text("Sent! Thank you for your time.");
+        }).fail(function () {
+			$("#contact-alert")
+                .removeClass("hidden")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .text("Error. Please verify your info and try again.");
+        });
+    }
 });

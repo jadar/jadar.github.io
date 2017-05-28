@@ -1,0 +1,21 @@
+<svg width="308px" height="547px" viewBox="0 0 308 547" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="white" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Portfolio-RPI" transform="translate(-359.000000, -173.000000)" stroke="#E6E6E6">
+            <g id="iPhone-6-Plus">
+                <g id="iPhone-6-Plus-Copy" transform="translate(358.000000, 173.000000)">
+                    <ellipse id="Oval-6" cx="114.445197" cy="38.4428571" rx="4.44735152" ry="4.43571429"></ellipse>
+                    <rect id="Rectangle-7" x="135.402996" y="35.9857143" width="40.5086142" height="4.91428571" rx="2.45714286"></rect>
+                    <path d="M307.849706,119.571123 C307.483123,119.8503 307.256689,120.289493 307.256689,120.771079 L307.256689,158.678921 C307.256689,159.159145 307.483419,159.598318 307.849706,159.877857 L307.849706,595.008784 C307.849706,609.08098 296.427948,620.5 282.345729,620.5 L28.9688774,620.5 C14.8849838,620.5 3.46490102,609.086274 3.46490102,595.008784 L3.46490102,25.9912163 C3.46490102,11.9190204 14.8866585,0.5 28.9688774,0.5 L282.345729,0.5 C296.429623,0.5 307.849706,11.9137259 307.849706,25.9912163 L307.849706,119.571123 Z" id="Rectangle-5"></path>
+                    <rect id="Rectangle-6" x="8.89470305" y="7.39285714" width="293.525201" height="606.214286" rx="22"></rect>
+                    <path d="M2.915486,120.503571 L2.91021506,158.946429" id="Line" stroke-linecap="square"></path>
+                    <path d="M2.22367576,73.1892857 L2.22367576,96.8464286" id="Line" stroke-linecap="square"></path>
+                    <path d="M2.915486,167.817857 L2.91021506,206.260714" id="Line" stroke-linecap="square"></path>
+                    <rect id="Rectangle-8" x="21.2543071" y="71.4714286" width="268.805993" height="478.057143" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
