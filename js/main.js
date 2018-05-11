@@ -44,6 +44,7 @@ $("#contactSubmit").click(function() {
     	let data = JSON.stringify({
                 "name": $("#name").val(),
                 "email": $("#email").val(),
+                "subject": $("#subject").val(),
                 "phone": $("#phone").val(),
                 "company": $("#website").val(),
                 "message": $("#message").val(),
@@ -51,16 +52,19 @@ $("#contactSubmit").click(function() {
             });
         $.ajax({
             type: "POST",
-            url: "http://contact.jadar.net/send_message/",
+            url: "https://contact2.jadar.net/send_message/",
             dataType: "json",
             contentType: "application/json",
             data: data
-        }).done(function () {
+        }).done(function (response) {
+            // console.log(response);
 			$("#contact-alert")
                 .removeClass("hidden")
                 .removeClass("alert-danger")
                 .addClass("alert-success")
                 .text("Sent! Thank you for your time.");
+
+            grecaptcha.reset();
         }).fail(function () {
 			$("#contact-alert")
                 .removeClass("hidden")

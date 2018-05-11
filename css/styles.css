@@ -347,3 +347,7 @@ a.scroll-arrow {
 			background-size: 100%;
 		}
 }
+
+footer {
+	height: 3em;
+}
