@@ -137,30 +137,13 @@ section > .container {
 .hero {
 	color: #fff;
 	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+	background-image: url("/images/jacob.jpg");
 	height: 100%;
-}
-
-.hero > img {
-	/*background: url() no-repeat fixed top;*/
-	/*background-size: cover;*/
-	vertical-align: top;
-	position: relative;
-	width: 105%;
-	/*height: 100%;*/
-	/* right: 100%; */
-}
-
-@media (max-width: 768px) {
-	.hero > img {
-		/*background: url() no-repeat fixed top;*/
-		/*background-size: cover;*/
-		height: 100%;
-		width: unset;
-		right: 120%;
-		display: block;
-		/*height: 100%;*/
-		/* right: 100%; */
-	}
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .hero .container {
